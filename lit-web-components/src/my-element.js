@@ -11,8 +11,8 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-        <slot></slot>
         <main-menu></main-menu>
+        <slot></slot>
       </div>
     `
   }
