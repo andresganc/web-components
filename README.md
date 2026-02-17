@@ -1,8 +1,10 @@
 
-# EXERCISES ANDRES - COMPOSE DESKTOP
+# WEB COMPONENTS ANDRES
 
-    - Exercises Andres - Compose Desktop
+    - Web components Andres
 
 
-## TABLE CONTENTS
+## WEB COMPONENTS NATIVOS
+
+## WEB COMPONENTS LIT
     
