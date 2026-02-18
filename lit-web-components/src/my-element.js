@@ -1,10 +1,15 @@
 import { LitElement, css, html } from 'lit'
 
 // Globla styles
-import './assets/css/global-styles.css'
+import '@assets/css/global-styles.css'
 
+// STRUCTURE
+import '@views/menu/main-menu.js'
+
+// COMPONENTS
 // Menus
-import './views/menu/main-menu.js'
+import '@components/menus/menu-01/index.js'
+
 
 export class MyElement extends LitElement {
   
@@ -13,6 +18,7 @@ export class MyElement extends LitElement {
       <div>
         <main-menu></main-menu>
         <slot></slot>
+        <index-menu-horizontal-double></index-menu-horizontal-double>
       </div>
     `
   }
