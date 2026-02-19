@@ -19,12 +19,7 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-        <template-home>
-          
-        </template-home>
-        <!-- <main-menu></main-menu>
-        <slot></slot>
-        <index-menu-horizontal-double></index-menu-horizontal-double> -->
+        <template-home></template-home>
       </div>
     `
   }
