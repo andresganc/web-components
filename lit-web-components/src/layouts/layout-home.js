@@ -1,23 +1,23 @@
 
 import { LitElement, css, html } from 'lit';
 
-class TemplateHome extends LitElement {
+class LayoutHome extends LitElement {
 
     render() {
         return html`
             <div class='template'>
                 <div class='template__menu'>
-                    <slot></slot>
+                    <slot name='slot-menu'></slot>
                 </div>
                 <div class='template__body'>
                     <div class='template__body-header'>
-                        <slot></slot>
+                        <slot name='slot-header'></slot>
                     </div>
                     <div class='template__body-main'>
-                        <slot></slot>
+                        <slot name='slot-body'></slot>
                     </div>
                     <div class='template__body-footer'>
-                        <slot></slot>
+                        <slot name='slot-footer'></slot>
                     </div>
                 </div>
             </div>
@@ -32,12 +32,15 @@ class TemplateHome extends LitElement {
                 padding: 0;
             }
 
-            template {
+            .template {
+                display: inline-block;
                 padding: 1rem 2rem;
                 background-color: #424242;
             }
+
+
         `
     }
 }
 
-customElements.define('template-home', TemplateHome);
+customElements.define('layout-home', LayoutHome);

@@ -3,11 +3,11 @@ import { LitElement, css, html } from 'lit'
 // Globla styles
 import '@assets/css/global-styles.css'
 
-// TEMPLATES
-import '@templates/template-home'
+// LAYOUTS
+import '@layouts/layout-home'
 
-// STRUCTURE
-import '@views/menu/main-menu.js'
+// VIEWS
+import '@views/menus/main-menu.js'
 
 // COMPONENTS
 // Menus
@@ -19,7 +19,9 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-        <template-home></template-home>
+        <home-template>
+
+        </home-template>
       </div>
     `
   }

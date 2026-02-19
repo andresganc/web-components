@@ -1,7 +1,7 @@
 
 import { LitElement, css, html } from 'lit';
 
-class TemplateComponents extends LitElement {
+class LayoutComponent extends LitElement {
 
     render() {
         return html`
@@ -22,4 +22,4 @@ class TemplateComponents extends LitElement {
     }
 }
 
-customElements.define('template-components', TemplateComponents);
+customElements.define('layout-component', LayoutComponent);
