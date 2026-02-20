@@ -1,13 +1,16 @@
 
 import { LitElement, css, html } from 'lit';
 
+// MENUS
+import '@views/menus/main-menu'
+
 class LayoutHome extends LitElement {
 
     render() {
         return html`
             <div class='template'>
                 <div class='template__menu'>
-                    <slot name='slot-menu'></slot>
+                    <main-menu></main-menu>
                 </div>
                 <div class='template__body'>
                     <div class='template__body-header'>

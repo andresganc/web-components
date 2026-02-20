@@ -5,9 +5,9 @@ import { LitElement, css, html } from 'lit'
 import '@layouts/layout-home'
 
 // SECTIONS
-import './sections/header/section-header-comp-desktop'
-import './sections/body/section-body-comp-desktop'
-import './sections/footer/section-footer-comp-desktop'
+import './sections/header/section-header-home-desktop'
+import './sections/body/section-body-home-desktop'
+import './sections/footer/section-footer-home-desktop'
 
 class PageHomeDesktop extends LitElement {
 
@@ -15,13 +15,13 @@ class PageHomeDesktop extends LitElement {
         return html`
             <layout-home>
                 <div slot='slot-header'>
-                    <section-header-comp-desktop></section-header-comp-desktop>
+                    <section-header-home-desktop></section-header-home-desktop>
                 </div>
                 <div slot='slot-body'>
-                    <section-body-comp-desktop></section-body-comp-desktop>
+                    <section-body-home-desktop></section-body-home-desktop>
                 </div>
                 <div slot='slot-footer'>
-                    <section-footer-comp-desktop></section-footer-comp-desktop>
+                    <section-footer-home-desktop></section-footer-home-desktop>
                 </div>
             </layout-home>
         `
