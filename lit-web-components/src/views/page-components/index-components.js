@@ -1,15 +1,15 @@
 
 import { LitElement, html } from 'lit';
 
-import "./page-home-desktop";
-import "./page-home-mobile";
+import "./page-components-desktop";
+import "./page-components-mobile";
 
-export class IndexPageHome extends LitElement {
+export class IndexPageComponents extends LitElement {
   render() {
 
     /* Desktop */
     if (window.screen.width > 1600) {
-      return html`<page-home-desktop></page-home-desktop>`;
+      return html`<page-components-desktop></page-components-desktop>`;
     }
 
     // /* Laptop */
@@ -23,12 +23,12 @@ export class IndexPageHome extends LitElement {
     // }
 
     /* Mobile */
-    if (window.screen.width <= 500) {
-      return html`<page-home-desktop></page-home-desktop>`;
-    }
+    // if (window.screen.width <= 500) {
+    //   return html`<page-components-desktop></page-components-desktop>`;
+    // }
     
     return html`Error al cargar la pagina`;
   }
 }
 
-customElements.define('index-page-home', IndexPageHome);
+customElements.define('index-page-components', IndexPageComponents);

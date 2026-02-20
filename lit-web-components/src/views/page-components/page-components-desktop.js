@@ -2,18 +2,18 @@
 import { LitElement, css, html } from 'lit'
 
 // LAYOUT
-import '@layouts/layout-home'
+import '@layouts/layout-component'
 
 // SECTIONS
 import './sections/header/section-header-comp-desktop'
 import './sections/body/section-body-comp-desktop'
 import './sections/footer/section-footer-comp-desktop'
 
-class PageHomeDesktop extends LitElement {
+class PageComponentsDesktop extends LitElement {
 
     render() {
         return html`
-            <layout-home>
+            <layout-component>
                 <div slot='slot-header'>
                     <section-header-comp-desktop></section-header-comp-desktop>
                 </div>
@@ -23,9 +23,9 @@ class PageHomeDesktop extends LitElement {
                 <div slot='slot-footer'>
                     <section-footer-comp-desktop></section-footer-comp-desktop>
                 </div>
-            </layout-home>
+            </layout-component>
         `
     }
 }
 
-customElements.define('page-home-desktop', PageHomeDesktop)
+customElements.define('page-components-desktop', PageComponentsDesktop)

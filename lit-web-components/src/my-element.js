@@ -3,8 +3,8 @@ import { LitElement, css, html } from 'lit'
 // Globla styles
 import '@assets/css/global-styles.css'
 
-// PAGES
-import '@views/page-home/index'
+// ROUTES
+import '@router/main-router'
 
 
 export class MyElement extends LitElement {
@@ -12,7 +12,7 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-        <index-page-home></index-page-home>
+        <main-router></main-router>
       </div>
     `
   }

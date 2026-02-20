@@ -1,7 +1,8 @@
 
 import { LitElement, css, html} from 'lit'
 
-class MainMenu extends LitElement {
+
+class HorizontalMenu extends LitElement {
 
     render() {
         return html`
@@ -24,7 +25,7 @@ class MainMenu extends LitElement {
                                     />
                                 </svg>
                             </div>
-                            <div><p>HOME</p></div>
+                            <div><a href='/'>HOME</a></div>
                         </div>
                         <div class='menu-nav_nav-item'>
                             <div>
@@ -34,11 +35,12 @@ class MainMenu extends LitElement {
                                     />
                                 </svg>
                             </div>
-                            <div><p>COMPONENTS</p></div>
+                            <div><a href='/components'>COMPONENTS</a></div>
                         </div>
                     </nav>
                 </div>
             </div>
+            
         `
     }
 
@@ -115,4 +117,4 @@ class MainMenu extends LitElement {
     }
 }
 
-customElements.define('main-menu', MainMenu);
+customElements.define('horizontal-menu', HorizontalMenu);
