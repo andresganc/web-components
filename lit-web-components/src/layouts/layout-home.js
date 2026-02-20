@@ -8,18 +8,18 @@ class LayoutHome extends LitElement {
 
     render() {
         return html`
-            <div class='template'>
-                <div class='template__menu'>
+            <div class='layout'>
+                <div class='layout__menu'>
                     <main-menu></main-menu>
                 </div>
-                <div class='template__body'>
-                    <div class='template__body-header'>
+                <div class='layout__body'>
+                    <div class='layout__body-header'>
                         <slot name='slot-header'></slot>
                     </div>
-                    <div class='template__body-main'>
+                    <div class='layout__body-main'>
                         <slot name='slot-body'></slot>
                     </div>
-                    <div class='template__body-footer'>
+                    <div class='layout__body-footer'>
                         <slot name='slot-footer'></slot>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ class LayoutHome extends LitElement {
                 padding: 0;
             }
 
-            .template {
+            .layout {
                 display: inline-block;
                 padding: 1rem 2rem;
                 background-color: #424242;
