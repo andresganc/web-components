@@ -2,7 +2,7 @@
 import { LitElement, css, html } from 'lit'
 
 // LAYOUT
-import '@layouts/layout-main'
+import '@layouts/main-layout'
 
 // SECTIONS
 import './sections/header/section-header-home-desktop'
@@ -13,7 +13,7 @@ class PageHomeDesktop extends LitElement {
 
     render() {
         return html`
-            <layout-main>
+            <main-layout>
                 <div slot='slot-header'>
                     <section-header-home-desktop></section-header-home-desktop>
                 </div>
@@ -23,7 +23,7 @@ class PageHomeDesktop extends LitElement {
                 <div slot='slot-footer'>
                     <section-footer-home-desktop></section-footer-home-desktop>
                 </div>
-            </layout-main>
+            </main-layout>
         `
     }
 }

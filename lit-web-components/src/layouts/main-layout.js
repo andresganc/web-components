@@ -4,7 +4,30 @@ import { LitElement, css, html } from 'lit';
 // MENUS
 import '@views/menus/horizontal-menu'
 
+// PAGES
+import '@views/page-home/index-home'
+import '@views/page-about/index-about'
+import '@views/page-components/index-components'
+
 class MainLayout extends LitElement {
+
+    static properties = {
+        page: { type: String}
+    }
+
+    constructor () {
+        super()
+        this.page = ''
+    }
+
+    renderPage() {
+    switch (this.page) {
+      case 'about':
+        return html`<index-about></index-about>`;
+      default:
+        return html`<index-home></index-home>`;
+    }
+  }
 
     render() {
         return html`
@@ -13,8 +36,10 @@ class MainLayout extends LitElement {
                     <!-- <slot name='slot-menu'></slot> -->
                     <horizontal-menu></horizontal-menu>
                 </div>
-                <div class='layout__body'>
-                    <div class='layout__body-header'>
+                <main class='layout__body'>
+                    <p>LAYOUT MAIN</p>
+                    ${this.renderPage()}
+                    <!-- <div class='layout__body-header'>
                         <slot name='slot-header'></slot>
                     </div>
                     <div class='layout__body-main'>
@@ -22,8 +47,8 @@ class MainLayout extends LitElement {
                     </div>
                     <div class='layout__body-footer'>
                         <slot name='slot-footer'></slot>
-                    </div>
-                </div>
+                    </div> -->
+                </main>
             </div>
         `
     }

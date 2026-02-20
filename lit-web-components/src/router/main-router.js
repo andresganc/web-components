@@ -13,7 +13,13 @@ class MainRouter extends LitElement {
             path: '/',
             // render: () => html`<index-page-home></index-page-home>`,
             // render: () => html`<page-home-desktop></page-home-desktop>`,
-            render: () => html`<main-layout></main-layout>`
+            render: () => html`<main-layout page='home'></main-layout>`
+        },
+        {
+            path: '/about',
+            // render: () => html`<index-page-home></index-page-home>`,
+            // render: () => html`<page-home-desktop></page-home-desktop>`,
+            render: () => html`<main-layout page='about'></main-layout>`
         },
         {
             path: '/components/:name',
