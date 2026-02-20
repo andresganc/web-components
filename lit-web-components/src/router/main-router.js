@@ -34,30 +34,30 @@ class MainRouter extends LitElement {
             },
 
             // Ruta con parámetro
-            // {
-            //     path: '/components/:name',
-            //     render: (route) => {
-            //     const name = route && route.params
-            //         ? route.params.name
-            //         : 'home';
-
-            //     return html`<components-layout component="${name}"></components-layout>`;
-            //     },
-
-            //     // Uso para proyecto hecho Typescript
-            //     // render: ({ params }) => html`<component-layout component=${params.name}></component-layout>`,
-            // },
-
             {
                 path: '/components/:name',
                 render: (route) => {
-                const name = route?.params?.name || 'button';
+                const name = route && route.params
+                    ? route.params.name
+                    : 'home';
 
-                return html`
-                    <components-layout component="${name}"></components-layout>
-                `;
-                }
+                return html`<components-layout component="${name}"></components-layout>`;
+                },
+
+                // Uso para proyecto hecho Typescript
+                // render: ({ params }) => html`<component-layout component=${params.name}></component-layout>`,
             },
+
+            // {
+            //     path: '/components/:name',
+            //     render: (route) => {
+            //     const name = route?.params?.name || 'button';
+
+            //     return html`
+            //         <components-layout component="${name}"></components-layout>
+            //     `;
+            //     }
+            // },
 
             {
                 path: '(.*)',
