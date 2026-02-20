@@ -14,7 +14,8 @@ class PageHomeDesktop extends LitElement {
     render() {
         return html`
             <main-layout>
-                <div slot='slot-header'>
+                <p>Page home desktop</p>
+                <!-- <div slot='slot-header'>
                     <section-header-home-desktop></section-header-home-desktop>
                 </div>
                 <div slot='slot-body'>
@@ -22,7 +23,7 @@ class PageHomeDesktop extends LitElement {
                 </div>
                 <div slot='slot-footer'>
                     <section-footer-home-desktop></section-footer-home-desktop>
-                </div>
+                </div> -->
             </main-layout>
         `
     }

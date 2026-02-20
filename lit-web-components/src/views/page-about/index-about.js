@@ -23,9 +23,9 @@ export class IndexPageAbout extends LitElement {
     // }
 
     /* Mobile */
-    if (window.screen.width <= 500) {
-      return html`<page-about-desktop></page-about-desktop>`;
-    }
+    // if (window.screen.width <= 500) {
+    //   return html`<page-about-desktop></page-about-desktop>`;
+    // }
     
     return html`Error al cargar la pagina`;
   }

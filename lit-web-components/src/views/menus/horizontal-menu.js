@@ -37,7 +37,7 @@ class HorizontalMenu extends LitElement {
                                     />
                                 </svg>
                             </div>
-                            <div><a href='/components/components'>COMPONENTS</a></div>
+                            <div><a href='/components'>COMPONENTS</a></div>
                         </div>
 
                         <div class='menu-nav_nav-item'>

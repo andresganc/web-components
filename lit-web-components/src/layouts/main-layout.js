@@ -7,47 +7,49 @@ import '@views/menus/horizontal-menu'
 // PAGES
 import '@views/page-home/index-home'
 import '@views/page-about/index-about'
-import '@views/page-components/index-components'
+
+import '@views/page-home/page-home-desktop'
+import '@views/page-about/page-about-desktop'
 
 class MainLayout extends LitElement {
 
     static properties = {
-        page: { type: String}
+        page: { type: String },
+    };
+
+    constructor() {
+        super();
+        this.page = 'home';
     }
 
-    constructor () {
-        super()
-        this.page = ''
-    }
+    // renderPage() {
+    //     switch (this.page) {
+    //     case 'about':
+    //         return html`<index-about></index-about>`;
+    //     case 'home':
+    //         default:
+    //         return html`<index-home></index-home>`;
+    //     }
+    // }
 
     renderPage() {
-    switch (this.page) {
-      case 'about':
-        return html`<index-about></index-about>`;
-      default:
-        return html`<index-home></index-home>`;
+        switch (this.page) {
+        case 'about':
+            return html`<page-about-desktop></page-about-desktop>`;
+        case 'home':
+            default:
+            return html`<page-home-desktop></page-home-desktop>`;
+        }
     }
-  }
 
     render() {
         return html`
             <div class='layout'>
                 <div class='layout__menu'>
-                    <!-- <slot name='slot-menu'></slot> -->
                     <horizontal-menu></horizontal-menu>
                 </div>
                 <main class='layout__body'>
-                    <p>LAYOUT MAIN</p>
                     ${this.renderPage()}
-                    <!-- <div class='layout__body-header'>
-                        <slot name='slot-header'></slot>
-                    </div>
-                    <div class='layout__body-main'>
-                        <slot name='slot-body'></slot>
-                    </div>
-                    <div class='layout__body-footer'>
-                        <slot name='slot-footer'></slot>
-                    </div> -->
                 </main>
             </div>
         `
