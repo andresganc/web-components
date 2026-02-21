@@ -22,16 +22,6 @@ class MainLayout extends LitElement {
         this.page = 'home';
     }
 
-    // renderPage() {
-    //     switch (this.page) {
-    //     case 'about':
-    //         return html`<index-about></index-about>`;
-    //     case 'home':
-    //         default:
-    //         return html`<index-home></index-home>`;
-    //     }
-    // }
-
     renderPage() {
         switch (this.page) {
         case 'about':
@@ -48,9 +38,12 @@ class MainLayout extends LitElement {
                 <div class='layout__menu'>
                     <horizontal-menu></horizontal-menu>
                 </div>
-                <main class='layout__body'>
-                    ${this.renderPage()}
-                </main>
+                <div>
+                    <main class='layout__body'>
+                        ${this.renderPage()}
+                    </main>
+                </div>
+                
             </div>
         `
     }
@@ -63,11 +56,11 @@ class MainLayout extends LitElement {
                 padding: 0;
             }
 
-            .layout {
+            /* .layout {
                 display: inline-block;
                 padding: 1rem 2rem;
                 background-color: #424242;
-            }
+            } */
 
 
         `

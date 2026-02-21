@@ -25,16 +25,22 @@ class MainRouter extends LitElement {
                 // render: () => html`<page-home-desktop></page-home-desktop>`,
                 render: () => html`<main-layout page='about'></main-layout>`
             },
-
-            // Ruta base de componentes (SIN params)
+            
             {
+                // Ruta base de componentes (SIN params)
                 path: '/components',
                 render: () =>
-                html`<components-layout component="home"></components-layout>`,
+                html`<component-layout component="home"></component-layout>`,
             },
 
-            // Ruta con parámetro
             {
+                path: '/components/buttons',
+                render: () =>
+                html`<component-layout component="buttons"></component-layout>`,
+            },
+
+            {
+                // Ruta con parámetro
                 path: '/components/:name',
                 render: (route) => {
                 const name = route && route.params
@@ -42,27 +48,33 @@ class MainRouter extends LitElement {
                     : 'home';
 
                 return html`<components-layout component="${name}"></components-layout>`;
-                },
-
-                // Uso para proyecto hecho Typescript
-                // render: ({ params }) => html`<component-layout component=${params.name}></component-layout>`,
+                },       
             },
-
-            // {
-            //     path: '/components/:name',
-            //     render: (route) => {
-            //     const name = route?.params?.name || 'button';
-
-            //     return html`
-            //         <components-layout component="${name}"></components-layout>
-            //     `;
-            //     }
-            // },
 
             {
                 path: '(.*)',
                 render: () => html`<h2>Error 404 - Pagina no encontrada</h2>`
             },
+
+            // {
+            //     // Otra opcion para JS con parametros
+            //     path: '/components/:name',
+            //     render: (route) => {
+            //     const name = route?.params?.name || 'home';
+
+            //     return html`
+            //         <component-layout component="${name}"></component-layout>
+            //     `;
+            //     }
+            // },
+
+
+            // {
+            //     // Uso para proyecto hechos con TS
+            //     path: '/components/:name',
+            //     render: ({ params }) => html`<component-layout component=${params.name}></component-layout>`,
+            // },
+
         ])
     }
 

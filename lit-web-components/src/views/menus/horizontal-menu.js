@@ -7,7 +7,7 @@ class HorizontalMenu extends LitElement {
     render() {
         return html`
             <div class='menu'>
-                <div class='menu-title'>
+                <div class='menu__title'>
                     <div>
 
                     </div>
@@ -15,10 +15,10 @@ class HorizontalMenu extends LitElement {
                         <p>WEB COMPONENTS</p>
                     </div>
                 </div>
-                <div class='menu-nav'>
-                    <nav class='menu-nav_nav'>
+                <div class='menu__nav'>
+                    <nav class='menu__nav--nav'>
 
-                        <div class='menu-nav_nav-item'>
+                        <div class='menu__nav--nav--item item'>
                             <div>
                                 <svg class="icon" viewBox="0 0 24 24">
                                     <path
@@ -29,7 +29,7 @@ class HorizontalMenu extends LitElement {
                             <div><a href='/'>HOME</a></div>
                         </div>
 
-                        <div class='menu-nav_nav-item'>
+                        <div class='menu__nav--nav--item item'>
                             <div>
                                 <svg class="icon" viewBox="0 0 24 24">
                                     <path
@@ -40,7 +40,7 @@ class HorizontalMenu extends LitElement {
                             <div><a href='/components'>COMPONENTS</a></div>
                         </div>
 
-                        <div class='menu-nav_nav-item'>
+                        <div class='menu__nav--nav-item item'>
                             <div>
                                 <svg class="icon" viewBox="0 0 24 24">
                                     <path
@@ -61,9 +61,9 @@ class HorizontalMenu extends LitElement {
     static get styles() {
         return css`
             :host {
-                max-width: 1280px;
+                display: inline-block;
                 margin: 0 auto;
-                padding: 2rem;
+                padding: .5rem;
                 text-align: center;
             }
 
@@ -105,27 +105,33 @@ class HorizontalMenu extends LitElement {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 1rem;
+                padding: .5rem;
             }
 
-            .menu-title {
+            .menu__title {
                 display: flex;
             }
 
-            .menu-nav {
-                display: flex;
+            .menu__nav {
+                display: flex; 
             }
 
-            .menu-nav_nav {
+            .menu__nav--nav {
                 display: flex;
+                justify-content: space-between;
+                align-items: center;                
+                
+                /* &--item {
+                    display: block;
+                    padding: .5rem;
+                    background-color: #000000;
+                } */
             }
 
-            .menu-nav_nav-item {
+            .item {
                 display: block;
                 padding: .5rem;
-                /* background-color: #000000; */
             }
-
             
         `
     }

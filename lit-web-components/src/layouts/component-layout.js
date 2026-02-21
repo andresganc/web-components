@@ -3,6 +3,7 @@ import { LitElement, css, html } from 'lit';
 
 // MENUS
 import '@views/menus/horizontal-menu'
+import '@views/menus/vertical-menu'
 
 // PAGES
 import '@views/page-components/page-components-desktop'
@@ -21,8 +22,10 @@ class ComponentLayout extends LitElement {
 
     renderComponent() {
         switch (this.component) {
-        case 'button':
+        case 'buttons':
             return html`<page-comp-button-desk></page-comp-button-desk>`;
+        case 'menus':
+            return html`<page-components-menus></page-components-menus>`;
         case 'home':
         default:
             return html`<page-components-desktop></page-components-desktop>`;
@@ -32,13 +35,42 @@ class ComponentLayout extends LitElement {
     render() {
         return html`
             <div class='layout'>
-                <div class='layout__menu'>
+                <div class='layout__menu menu'>
                     <horizontal-menu></horizontal-menu>
                 </div>
-                <main class='layout__body'>
-                    ${this.renderComponent()}
-                </main>
+                <div class='layout__body body'>
+                    <div class='layout__body--nav nav'>
+                        <vertical-menu></vertical-menu>
+                    </div>
+                    <main class='layout__body--main main'>
+                        ${this.renderComponent()}
+                    </main>
+                </div>     
             </div>
+        `
+    }
+
+    static get styles() {
+        return css`
+            :host {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+            }
+
+            .layout {
+                display: inline-block;
+                padding: .5rem;
+                /* background-color: #424242; */
+            }
+
+            .body {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+
         `
     }
 }
