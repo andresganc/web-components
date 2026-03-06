@@ -1,5 +1,5 @@
 {
-  "name": "lit-web-components",
+  "name": "lit-web-components-js",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@eslint/json": "^1.0.1",
-    "eslint": "^10.0.0",
+    "eslint": "^10.0.2",
     "vite": "^7.3.1"
   }
 }
